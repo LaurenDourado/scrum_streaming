@@ -32,6 +32,9 @@ select,
     border: 3px solid #fff ;
     border-radius: 5px;
 }
+.borderless{
+    border: none;
+}
 
 /* botões */
 .common-btn{
@@ -51,6 +54,9 @@ select,
     background-color: #ddd !important;
     color: #000000 !important;
     border: 3px solid #ddd !important;
+}
+.common-btn:hover .bi, .common-btn:active .bi{
+    color: #000 !important;
 }
 
 /* inputs */
@@ -74,8 +80,8 @@ option.common-input{
 
 /* faz os posters de filmes e series ficar do tamanho correto */
 .fmsr-poster{
-    max-width: 300px;
     height: 300px;
+    width: 200px;
     border: 2px dashed #fff;
     border-radius: 5px;
 }
@@ -87,6 +93,12 @@ option.common-input{
 }
 body{
     background-color: #313131;
+}
+.dropdown-menu{
+    background-color: #313131;
+}
+.dropdown-menu .dropdown-item{
+    background: none;
 }
 .nav-color{
     background-color: #000000;
@@ -135,6 +147,11 @@ footer{
 }
 .days-input{
     color: #000 !important; 
+}
+
+.limite{
+    color: #D22424 !important;
+    text-decoration: underline dashed;
 }
 @media (max-width: 768px){
     .fmsr-poster{
