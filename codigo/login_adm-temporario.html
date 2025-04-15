@@ -11,8 +11,22 @@
     <link rel="stylesheet" href="style.css">
     <title>CineHome</title>
 </head>
-<body>
-    
+<body style="background-image: url(../img/foto_filmes.png); background-size: cover;">
+    <div class="container m-5 log-container common-container">
+        <h1>Login</h1>
+        <form method="post" class="log-form">
+            <div class="mb-3">
+                <label for="user" class="form-label">Usuário</label>
+                <input type="text" name="user" id="usuario" class="form-control common-input" placeholder="Nome de usuario">
+            </div>
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" name="senha" id="senha" class="form-control common-input">
+            </div>
+            <button class="btn common-btn" type="submit">Entrar</button>
+        </form>
+    </div>
+
     <!-- js do bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet');
+*{
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* fonte para títulos */
+.title-font{
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+/* containers */
+.common-container{
+    background-color: #00000020;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+
+/* botões */
+.common-btn{
+    background-color: #00000020;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    max-width: fit-content;
+    align-self: center;
+}
+.common-btn:hover{
+    background-color: #fff;
+    color: #000000;
+}
+.common-btn:active{
+    background-color: #ddd !important;
+    color: #000000 !important;
+    border: 3px solid #ddd !important;
+}
+
+/* inputs */
+.common-input{
+    background-color: #ffffff88;
+    border: none;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    color: #fff;
+}
+.common-input:focus{
+    background-color: #ffffffbb;
+    color: #FDFCF7;
+    box-shadow: none;
+    border-left: 4px solid #F31111;
+    border-bottom: 4px solid #F31111;
+}
+
+/* faz os posters de filmes e series ficar do tamanho correto */
+.fmsr-poster{
+    max-width: 300px;
+    height: 300px;
+    border: 2px dashed #fff;
+    border-radius: 5px;
+}
+body{
+    background-color: #313131;
+}
+.nav-color{
+    background-color: #000000;
+}
+.nav-logo img{
+    width: 75px;
+    height: 75px;
+}
+.cover{
+    background: linear-gradient(90deg, #000000 0%, #00000000 50%), url(../img/pgn_login.jpg);
+    background-size: cover;
+}
+.log-container{
+    width: 30vw;
+    height: 70vh;
+}
+.log-container h1{
+    width: 100%;
+    text-align: center;
+    margin-top: .5em;
+}
+.log-form{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+footer{
+    background-color: #585858;
+}
+@media (max-width: 768px){
+    .fmsr-poster{
+        max-width: 200px;
+        height: 200px;
+    }
+}
