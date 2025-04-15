@@ -1,0 +1,71 @@
+[
+    {
+        "titulo": "vingadores",
+        "genero": "a\u00e7ao",
+        "ano": "2013-05-12"
+    },
+    {
+        "titulo": null,
+        "genero": null,
+        "ano": null
+    },
+    {
+        "titulo": null,
+        "genero": null,
+        "ano": null
+    },
+    {
+        "titulo": "como treinar seu dragao",
+        "genero": "anima\u00e7\u00e3o",
+        "ano": "2011-04-23"
+    },
+    {
+        "titulo": "como treinar seu dragao",
+        "tipo": "filme",
+        "genero": "anima\u00e7\u00e3o",
+        "status": "disponivel",
+        "ano": "2011-04-23"
+    },
+    {
+        "titulo": "como treinar seu dragao",
+        "tipo": "filme",
+        "genero": "a\u00e7ao",
+        "status": "disponivel",
+        "ano": "20011-07-23"
+    },
+    {
+        "titulo": "10 coisas que eu odeio em voce",
+        "tipo": "filmes",
+        "genero": "romance",
+        "status": "indisponivel",
+        "ano": "1999-04-23"
+    },
+    {
+        "titulo": "vale tudo",
+        "tipo": "novela",
+        "genero": "drama",
+        "status": "indisponivel",
+        "ano": "1989-10-31"
+    },
+    {
+        "titulo": null,
+        "tipo": null,
+        "genero": null,
+        "status": null,
+        "ano": null
+    },
+    {
+        "titulo": null,
+        "tipo": null,
+        "genero": null,
+        "status": null,
+        "ano": null
+    },
+    {
+        "titulo": null,
+        "tipo": null,
+        "genero": null,
+        "status": null,
+        "ano": null
+    }
+]
