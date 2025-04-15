@@ -12,7 +12,127 @@
     <title>CineHome</title>
 </head>
 <body>
+    <nav class="navbar nav-expand-lg nav-color p-0">
+        <div class="container">
+            <a href="#" class="navbar-brand nav-logo"><img src="../img/Logo Streaming Filmes.svg" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navegação">
+                <i class="bi bi-list" style="color: #fff;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Assinaturas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     
+    <!-- Calculadora de aluguel -->
+    <div class="card m-5 common-container">
+        <div class="card-header">
+            <h4 class="mb-0">Calcular a previsão de aluguel</h4>
+        </div>
+        <div class="card-body">
+            <form action="post" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="tipo" class="input-label">Tipo:</label>
+                    <select name="tipo" id="tipo" class="form-select common-input" required>
+                        <option value="filme" class="common-input">Filme</option>
+                        <option value="serie" class="common-input">Série</option>
+                        <option value="novela" class="common-input">Novela</option>
+                        <option value="documentario" class="common-input">Documentário</option>
+                        <option value="null" selected hidden></option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="dias" class="input-label">Tempo em dias: </label>
+                    <input type="number" name="dias" id="tempo" class="form-control common-input" value="1" required>
+                </div>
+                <button class="btn common-btn" type="submit" name="calcular">Calcular</button>
+            </form>
+        </div>
+    </div>
+        <div class="col-12">
+            <div class="card common-container m-5">
+                <div class="card-header">
+                    <h4 class="mb-0">Veículos cadastrados</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table listagem table-hover">
+                            <thead>
+                                <th>Poster</th>
+                                <th>Título</th>
+                                <th>Sinópse</th>
+                                <th>Gênero</th>
+                                <th>Tipo</th>
+                                <th>Status</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="../img/comotreinarseudragao2.jpg" alt="filme" class="mini-poster"></td>
+                                    <td>Como treinar seu dragão 2</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
+                                    <td>Ação/Animado</td>
+                                    <td>Filme</td>
+                                    <td>
+                                        <span class="badge bg-success">
+                                            Disponível
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../img/dexter.jpg" alt="filme" class="mini-poster"></td>
+                                    <td>Dexter</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
+                                    <td>Drama</td>
+                                    <td>Série</td>
+                                    <td>
+                                        <span class="badge bg-warning">
+                                            Alugado
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../img/aindaestouaqui.jpg" alt="filme" class="mini-poster"></td>
+                                    <td>Ainda estou aqui</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
+                                    <td>Drama</td>
+                                    <td>Filme</td>
+                                    <td>
+                                        <span class="badge bg-success">
+                                            Disponível
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../img/valetudo.jpg" alt="filme" class="mini-poster"></td>
+                                    <td>Vale tudo</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
+                                    <td>Drama</td>
+                                    <td>Novela</td>
+                                    <td>
+                                        <span class="badge bg-success">
+                                            Disponível
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <footer class="d-flex flex-column align-items-center justify-content-center">
+        <div class="nav-logo"><img src="../img/Logo_streaming(2).png" alt="Logo"></div>
+        <p class="lh-1"><strong>Entre em contato:</strong> contact@cinehome.com</p>
+        <p class="lh-1" style="font-size: small;">©️2025, Cinehome.com | Direitos Reservados</p>
+    </footer>
     <!-- js do bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
