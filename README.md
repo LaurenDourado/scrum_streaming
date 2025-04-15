@@ -2,7 +2,7 @@
 
 # 📦 Sistema de Locadora Flexível
 
-Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC) para o **Curso Técnico em Desenvolvimento de Sistemas**. O sistema simula uma **locadora de itens com aluguel flexível**, permitindo personalização na escolha de itens, tempo de locação e com funcionalidades voltadas tanto para administradores quanto usuários comuns.
+Projeto desenvolvido como trabalho no **Curso Técnico em Desenvolvimento de Sistemas**. O sistema simula uma **locadora de itens com aluguel flexível**, permitindo personalização na escolha de itens, tempo de locação e com funcionalidades voltadas tanto para administradores quanto usuários comuns.
 
 ---
 
@@ -122,11 +122,4 @@ Desenvolver uma aplicação web completa que atenda aos requisitos de flexibilid
 - Apresentação (PowerPoint, PDF ou Canva)  
 
 ---
-
-## 👨‍🏫 Instituição
-
-**Curso Técnico em Desenvolvimento de Sistemas**  
-**Instituição:** SENAI "A. Jacob Lafer"  
-**Professor orientador:** Nadja Luz e Raul Lopes 
-**Ano:** 2025
 
