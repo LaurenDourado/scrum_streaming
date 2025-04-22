@@ -82,7 +82,6 @@ option.common-input{
 .fmsr-poster{
     height: 300px;
     width: 200px;
-    border: 2px dashed #fff;
     border-radius: 5px;
 }
 .mini-poster{
@@ -108,7 +107,7 @@ body{
     height: 75px;
 }
 .cover{
-    background: linear-gradient(90deg, #000000 0%, #00000000 50%), url(../img/pgn_login.jpg);
+    background: linear-gradient(90deg, #000000 0%, #00000000 50%), url(../img/pgn_login.jpg) no-repeat;
     background-size: cover;
 }
 .log-container{
@@ -131,19 +130,17 @@ footer{
 }
 .listagem{
     background-color: #00000000 !important;
-
 }
 .listagem thead{
-    border: 5px solid #fff;
+    border: 1px solid #fff;
     border-radius: 5px 5px 0 0;
 }
 .listagem tbody{
-    border: 5px solid #fff;
+    border: 1px solid #fff;
     border-radius: 0 0 5px 5px;
 }
 .listagem th, .listagem td{
     background-color: #ffffff10;
-
 }
 .days-input{
     color: #000 !important; 
@@ -153,9 +150,17 @@ footer{
     color: #D22424 !important;
     text-decoration: underline dashed;
 }
-@media (max-width: 768px){
+@media (max-width: px){
+
+}
+@media (max-width: 767px){
     .fmsr-poster{
         max-width: 200px;
         height: 200px;
+        margin-top: 0.5em;
     }
+    .borderless-sm{
+        border: none;
+    }
+    /* EU AMO BOOTSTRAP!!!!!!!!!! */
 }

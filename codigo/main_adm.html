@@ -99,154 +99,152 @@
             </form>
         </div>
     </div>
-        <div class="col-12">
-            <div class="card common-container m-5">
-                <div class="card-header">
-                    <h4 class="mb-0">Catalogo de filmes, séries, novelas e documentários</h4>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table listagem table-hover">
-                            <thead>
-                                <th>Poster</th>
-                                <th>Título</th>
-                                <th>Sinópse</th>
-                                <th>Gênero</th>
-                                <th>Tipo</th>
-                                <th>Status</th>
-                                <th>Ações</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><img src="../img/comotreinarseudragao2.jpg" alt="filme" class="mini-poster"></td>
-                                    <td>Como treinar seu dragão 2</td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
-                                    <td>Ação/Animado</td>
-                                    <td>Filme</td>
-                                    <td>
-                                        <span class="badge bg-success">
-                                            Disponível
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <!-- formulario de ações -->
-                                        <div class="action-wrapper">
-                                            <form action="POST" class="btn-group-actions">
-                                                <!-- botôm de delete (sempre disponível pro adm) -->
-                                                <button class="btn btn-danger btn-sm delete-btn" type="submit" name="deletar">Deletar</button>
 
-                                                <!-- botoins condicionais -->
-                                                <div class="rent-group">
-                                                    <!-- veículo alugado -->
-                                                    <button class="btn btn-warning btn-sm hidden" type="submit" name="devolver">Devolver</button>
-                                                    
-                                                    <!-- veículo disponível -->
-                                                    <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
-                                                    <button class="btn btn-primary btn-sm" type="submit" name="alugar">Alugar</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="../img/dexter.jpg" alt="filme" class="mini-poster"></td>
-                                    <td>Dexter</td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
-                                    <td>Drama</td>
-                                    <td>Série</td>
-                                    <td>
-                                        <span class="badge bg-warning">
-                                            Alugado
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <!-- formulario de ações -->
-                                        <div class="action-wrapper">
-                                            <form action="POST" class="btn-group-actions">
-                                                <!-- botôm de delete (sempre disponível pro adm) -->
-                                                <button class="btn btn-danger btn-sm delete-btn" type="submit" name="deletar">Deletar</button>
-
-                                                <!-- botoins condicionais -->
-                                                <div class="rent-group">
-                                                    <!-- veículo alugado -->
-                                                    <button class="btn btn-warning btn-sm hidden" type="submit" name="devolver">Devolver</button>
-                                                    
-                                                    <!-- veículo disponível -->
-                                                    <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
-                                                    <button class="btn btn-primary btn-sm" type="submit" name="alugar">Alugar</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="../img/aindaestouaqui.jpg" alt="filme" class="mini-poster"></td>
-                                    <td>Ainda estou aqui</td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
-                                    <td>Drama</td>
-                                    <td>Filme</td>
-                                    <td>
-                                        <span class="badge bg-success">
-                                            Disponível
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <!-- formulario de ações -->
-                                        <div class="action-wrapper">
-                                            <form action="POST" class="btn-group-actions">
-                                                <!-- botôm de delete (sempre disponível pro adm) -->
-                                                <button class="btn btn-danger btn-sm delete-btn" type="submit" name="deletar">Deletar</button>
-
-                                                <!-- botoins condicionais -->
-                                                <div class="rent-group">
-                                                    <!-- veículo alugado -->
-                                                    <button class="btn btn-warning btn-sm hidden" type="submit" name="devolver">Devolver</button>
-                                                    
-                                                    <!-- veículo disponível -->
-                                                    <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
-                                                    <button class="btn btn-primary btn-sm" type="submit" name="alugar">Alugar</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="../img/valetudo.jpg" alt="filme" class="mini-poster"></td>
-                                    <td>Vale tudo</td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
-                                    <td>Drama</td>
-                                    <td>Novela</td>
-                                    <td>
-                                        <span class="badge bg-success">
-                                            Disponível
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <!-- formulario de ações -->
-                                        <div class="action-wrapper">
-                                            <form action="POST" class="btn-group-actions">
-                                                <!-- botôm de delete (sempre disponível pro adm) -->
-                                                <button class="btn btn-danger btn-sm delete-btn" type="submit" name="deletar">Deletar</button>
-
-                                                <!-- botoins condicionais -->
-                                                <div class="rent-group">
-                                                    <!-- veículo alugado -->
-                                                    <button class="btn btn-warning btn-sm hidden" type="submit" name="devolver">Devolver</button>
-                                                    
-                                                    <!-- veículo disponível -->
-                                                    <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
-                                                    <button class="btn btn-primary btn-sm" type="submit" name="alugar">Alugar</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+    <!-- Listagem de produtos -->
+    <div class="col-12">
+        <div class="card common-container m-5">
+            <div class="card-header">
+                <h4 class="mb-0">Catalogo de filmes, séries, novelas e documentários</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table listagem table-hover">
+                        <thead>
+                            <th>Poster</th>
+                            <th>Título</th>
+                            <th>Sinópse</th>
+                            <th>Gênero</th>
+                            <th>Tipo</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="../img/comotreinarseudragao2.jpg" alt="filme" class="mini-poster"></td>
+                                <td>Como treinar seu dragão 2</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
+                                <td>Ação/Animado</td>
+                                <td>Filme</td>
+                                <td>
+                                    <span class="badge bg-success">
+                                        Disponível
+                                    </span>
+                                </td>
+                                <td>
+                                    <!-- formulario de ações -->
+                                    <div class="action-wrapper">
+                                        <form action="POST" class="btn-group-actions">
+                                            <!-- botôm de delete (sempre disponível pro adm) -->
+                                            <button class="btn btn-danger btn-sm delete-btn" type="submit" name="deletar">Deletar</button>
+                                            <!-- botoins condicionais -->
+                                            <div class="rent-group">
+                                                <!-- veículo alugado -->
+                                                <!-- <button class="btn btn-warning btn-sm hidden" type="submit" name="devolver">Devolver</button> -->
+                                                
+                                                <!-- veículo disponível -->
+                                                <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
+                                                <button class="btn btn-primary btn-sm" type="submit" name="alugar">Alugar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="../img/dexter.jpg" alt="filme" class="mini-poster"></td>
+                                <td>Dexter</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
+                                <td>Drama</td>
+                                <td>Série</td>
+                                <td>
+                                    <span class="badge bg-warning">
+                                        Alugado
+                                    </span>
+                                </td>
+                                <td>
+                                    <!-- formulario de ações -->
+                                    <div class="action-wrapper">
+                                        <form action="POST" class="btn-group-actions">
+                                            <!-- botôm de delete (sempre disponível pro adm) -->
+                                            <button class="btn btn-danger btn-sm delete-btn" type="submit" name="deletar">Deletar</button>
+                                            <!-- botoins condicionais -->
+                                            <div class="rent-group">
+                                                <!-- veículo alugado -->
+                                                <button class="btn btn-warning btn-sm hidden" type="submit" name="devolver">Devolver</button>
+                                                
+                                                <!-- veículo disponível -->
+                                                <!-- <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
+                                                <button class="btn btn-primary btn-sm" type="submit" name="alugar">Alugar</button> -->
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="../img/aindaestouaqui.jpg" alt="filme" class="mini-poster"></td>
+                                <td>Ainda estou aqui</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
+                                <td>Drama</td>
+                                <td>Filme</td>
+                                <td>
+                                    <span class="badge bg-success">
+                                        Disponível
+                                    </span>
+                                </td>
+                                <td>
+                                    <!-- formulario de ações -->
+                                    <div class="action-wrapper">
+                                        <form action="POST" class="btn-group-actions">
+                                            <!-- botôm de delete (sempre disponível pro adm) -->
+                                            <button class="btn btn-danger btn-sm delete-btn" type="submit" name="deletar">Deletar</button>
+                                            <!-- botoins condicionais -->
+                                            <div class="rent-group">
+                                                <!-- veículo alugado -->
+                                                <!-- <button class="btn btn-warning btn-sm hidden" type="submit" name="devolver">Devolver</button> -->
+                                                
+                                                <!-- veículo disponível -->
+                                                <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
+                                                <button class="btn btn-primary btn-sm" type="submit" name="alugar">Alugar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="../img/valetudo.jpg" alt="filme" class="mini-poster"></td>
+                                <td>Vale tudo</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
+                                <td>Drama</td>
+                                <td>Novela</td>
+                                <td>
+                                    <span class="badge bg-success">
+                                        Disponível
+                                    </span>
+                                </td>
+                                <td>
+                                    <!-- formulario de ações -->
+                                    <div class="action-wrapper">
+                                        <form action="POST" class="btn-group-actions">
+                                            <!-- botôm de delete (sempre disponível pro adm) -->
+                                            <button class="btn btn-danger btn-sm delete-btn" type="submit" name="deletar">Deletar</button>
+                                            <!-- botoins condicionais -->
+                                            <div class="rent-group">
+                                                <!-- veículo alugado -->
+                                                <!-- <button class="btn btn-warning btn-sm hidden" type="submit" name="devolver">Devolver</button> -->
+                                                
+                                                <!-- veículo disponível -->
+                                                <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
+                                                <button class="btn btn-primary btn-sm" type="submit" name="alugar">Alugar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+    </div>
     
     <footer class="d-flex flex-column align-items-center justify-content-center">
         <div class="nav-logo"><img src="../img/Logo_streaming(2).png" alt="Logo"></div>
