@@ -150,9 +150,6 @@ footer{
     color: #D22424 !important;
     text-decoration: underline dashed;
 }
-@media (max-width: px){
-
-}
 @media (max-width: 767px){
     .fmsr-poster{
         max-width: 200px;

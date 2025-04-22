@@ -2,3 +2,4 @@ página de login de adm será temporária por causa da falta de um login certo p
 
  PARA SPRINT 3:
 - transformar tudo em .php
+- fazer o login ser FUNCIONAL
