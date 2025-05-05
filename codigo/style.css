@@ -12,6 +12,11 @@
     font-family: 'Roboto Mono', sans-serif;
 }
 
+.bem{
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+
 /* links */
 a{
     color: #eee ;
@@ -35,6 +40,19 @@ select,
 .borderless{
     border: none;
 }
+
+.carrossel-posters {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .poster-img {
+    height: 400px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
 
 /* botões */
 .common-btn{
