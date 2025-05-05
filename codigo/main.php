@@ -1,3 +1,10 @@
+<?php
+require_once __DIR__ . '/../services/auth.php';
+
+use Services\Auth;
+
+$usuario = Auth::getUsuario();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,19 +22,29 @@
     <title>CineHome</title>
 </head>
 <body>
+
+<!-- HEADER -->
     <nav class="navbar nav-expand-lg nav-color p-0">
         <div class="container">
             <a href="home_adm.html" class="navbar-brand nav-logo"><img src="../img/Logo Streaming Filmes.svg" alt="Logo"></a>
             <div class="dropdown nav-item">
-                <button class="btn common-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-stars"></i> Admin</button>
+                <button class="btn common-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><?= htmlspecialchars($usuario['username'])?></button>
                 <ul class="dropdown-menu">
-                    <li><a href="home_adm.html" class="dropdown-item">Home</a></li>
-                    <li><a href="main_adm.html" class="dropdown-item">Catálogo</a></li>
+                    <li><a href="home.php" class="dropdown-item">Home</a></li>
+                    <li><a href="main.php" class="dropdown-item">Catálogo</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    
+    <?php if($mensagem):?>
+    <div class="alert alert-info alert-dismissable fade show" role="alert">
+        <?= htmlspecialchars($mensagem) ?>
+        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php endif;
+    if(Auth::isAdmin()): ?>
     <div class="card m-5 common-container">
         <div class="card-header">
             <h4 class="mb-0 title-font fs-2">Adicionar filme novo</h4>
@@ -71,12 +88,18 @@
                         <option value="null" disabled selected hidden></option>
                     </select>
                 </div>
+                <div class="mb-3">
+                    <label for="poster" class="form-label">Pôster:</label>
+                    <input type="file" name="poster" id="poster" class="form-control common-input" accept="image/*">
+                </div>
                 <button class="btn common-btn" type="submit" name="adicionar">
                     Adicionar ao catálogo
                 </button>
             </form>
         </div>
     </div>
+    <?php endif; ?>
+
     <!-- Calculadora de aluguel -->
     <div class="card m-5 common-container">
         <div class="card-header">
@@ -122,126 +145,43 @@
                             <th>Ações</th>
                         </thead>
                         <tbody>
+                            <?php foreach($categorias->getCatalogo() as $item): ?>
                             <tr>
-                                <td><img src="../img/comotreinarseudragao2.jpg" alt="filme" class="mini-poster"></td>
-                                <td>Como treinar seu dragão 2</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
-                                <td>Ação/Animado</td>
-                                <td>Filme</td>
+                                <td><img src="<?= $item->poster ?>"></td>
+                                <td><?= htmlspecialchars($item->titulo)?></td>
+                                <td><?= htmlspecialchars($item->sinopse)?></td>
+                                <td><?= htmlspecialchars($item->genero)?></td>
+                                <td><?= htmlspecialchars($item->tipo)?></td>
                                 <td>
-                                    <span class="badge bg-success">
-                                        Disponível
+                                    <span class="badge bg-<?= $veiculo->isDisponivel() ? 'success' : 'warning' ?>">
+                                        <?= $veiculo->isDisppnivel() ? 'Disponível' : 'Alugado' ?>
                                     </span>
                                 </td>
+                                <?php if (Auth::isAdmin()): ?>
                                 <td>
                                     <!-- formulario de ações -->
                                     <div class="action-wrapper">
                                         <form action="POST" class="btn-group-actions">
+                                            <input type="hidden" name="modelo" value="<?php htmlspecialchars($veiculo->getModelo); htmlspecialchars($veiculo->getPlaca); ?>">
                                             <!-- botôm de delete (sempre disponível pro adm) -->
                                             <button class="btn btn-danger btn-sm delete-btn" type="submit" name="deletar">Deletar</button>
                                             <!-- botoins condicionais -->
                                             <div class="rent-group">
-                                                <!-- veículo alugado -->
-                                                <!-- <button class="btn btn-warning btn-sm hidden" type="submit" name="devolver">Devolver</button> -->
-                                                
-                                                <!-- veículo disponível -->
-                                                <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
-                                                <button class="btn btn-primary btn-sm" type="submit" name="alugar">Alugar</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="../img/dexter.jpg" alt="filme" class="mini-poster"></td>
-                                <td>Dexter</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
-                                <td>Drama</td>
-                                <td>Série</td>
-                                <td>
-                                    <span class="badge bg-warning">
-                                        Alugado
-                                    </span>
-                                </td>
-                                <td>
-                                    <!-- formulario de ações -->
-                                    <div class="action-wrapper">
-                                        <form action="POST" class="btn-group-actions">
-                                            <!-- botôm de delete (sempre disponível pro adm) -->
-                                            <button class="btn btn-danger btn-sm delete-btn" type="submit" name="deletar">Deletar</button>
-                                            <!-- botoins condicionais -->
-                                            <div class="rent-group">
+                                                <?php if (!$veiculo->isDisponivel): ?>
                                                 <!-- veículo alugado -->
                                                 <button class="btn btn-warning btn-sm hidden" type="submit" name="devolver">Devolver</button>
-                                                
-                                                <!-- veículo disponível -->
-                                                <!-- <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
-                                                <button class="btn btn-primary btn-sm" type="submit" name="alugar">Alugar</button> -->
-                                            </div>
-                                        </form>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="../img/aindaestouaqui.jpg" alt="filme" class="mini-poster"></td>
-                                <td>Ainda estou aqui</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
-                                <td>Drama</td>
-                                <td>Filme</td>
-                                <td>
-                                    <span class="badge bg-success">
-                                        Disponível
-                                    </span>
-                                </td>
-                                <td>
-                                    <!-- formulario de ações -->
-                                    <div class="action-wrapper">
-                                        <form action="POST" class="btn-group-actions">
-                                            <!-- botôm de delete (sempre disponível pro adm) -->
-                                            <button class="btn btn-danger btn-sm delete-btn" type="submit" name="deletar">Deletar</button>
-                                            <!-- botoins condicionais -->
-                                            <div class="rent-group">
-                                                <!-- veículo alugado -->
-                                                <!-- <button class="btn btn-warning btn-sm hidden" type="submit" name="devolver">Devolver</button> -->
-                                                
+                                                <?php else: ?>
                                                 <!-- veículo disponível -->
                                                 <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
                                                 <button class="btn btn-primary btn-sm" type="submit" name="alugar">Alugar</button>
+                                                <?php endif ?>
                                             </div>
                                         </form>
                                     </div>
                                 </td>
+                                <?php endif; ?>
                             </tr>
-                            <tr>
-                                <td><img src="../img/valetudo.jpg" alt="filme" class="mini-poster"></td>
-                                <td>Vale tudo</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem, natus quos ipsa maxime quidem enim commodi labore deleniti quaerat dolores eligendi blanditiis, eius ipsam, modi voluptas odit! Adipisci, similique.</td>
-                                <td>Drama</td>
-                                <td>Novela</td>
-                                <td>
-                                    <span class="badge bg-success">
-                                        Disponível
-                                    </span>
-                                </td>
-                                <td>
-                                    <!-- formulario de ações -->
-                                    <div class="action-wrapper">
-                                        <form action="POST" class="btn-group-actions">
-                                            <!-- botôm de delete (sempre disponível pro adm) -->
-                                            <button class="btn btn-danger btn-sm delete-btn" type="submit" name="deletar">Deletar</button>
-                                            <!-- botoins condicionais -->
-                                            <div class="rent-group">
-                                                <!-- veículo alugado -->
-                                                <!-- <button class="btn btn-warning btn-sm hidden" type="submit" name="devolver">Devolver</button> -->
-                                                
-                                                <!-- veículo disponível -->
-                                                <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
-                                                <button class="btn btn-primary btn-sm" type="submit" name="alugar">Alugar</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </td>
-                            </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
