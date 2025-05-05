@@ -26,7 +26,7 @@
                 <label for="senha" class="form-label">Senha</label>
                 <input type="password" name="senha" id="senha" class="form-control common-input" required>
             </div>
-            <a href="home_user.html"><button class="btn common-btn" type="submit" disabled>Entrar</button></a>
+            <a href="home.php"><button class="btn common-btn" type="submit" disabled>Entrar</button></a>
         </form>
     </div>
     <!-- js do bootstrap -->
