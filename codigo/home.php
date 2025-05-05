@@ -1,3 +1,10 @@
+<?php
+require_once __DIR__ . '/../services/auth.php';
+
+use Services\Auth;
+
+$usuario = Auth::getUsuario();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,14 +22,14 @@
     <title>CineHome</title>
 </head>
 <body>
-    <nav class="navbar nav-expand-lg nav-color p-0">
+    <nav class="navbar nav-expand-lg nav-color">
         <div class="container">
-            <a href="home_user.html" class="navbar-brand nav-logo"><img src="../img/Logo Streaming Filmes.svg" alt="Logo"></a>
+            <a href="home_adm.html" class="navbar-brand nav-logo"><img src="../img/Logo Streaming Filmes.svg" alt="Logo"></a>
             <div class="dropdown nav-item">
-                <button class="btn common-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person"></i> User</button>
+                <button class="btn common-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><?= htmlspecialchars($usuario['username']) ?></button>
                 <ul class="dropdown-menu">
-                    <li><a href="home_user.html" class="dropdown-item">Home</a></li>
-                    <li><a href="main_user.html" class="dropdown-item">Catálogo</a></li>
+                    <li><a href="home.php" class="dropdown-item">Home</a></li>
+                    <li><a href="main.php" class="dropdown-item">Catálogo</a></li>
                 </ul>
             </div>
         </div>
@@ -30,7 +37,7 @@
 
     <div class="container m-lg-5">
         <div class="card common-container borderless">
-            <div class="card-header fs-5 title-font">Bem-vindo de volta, User!</div>
+            <div class="card-header fs-5 title-font">Bem-vindo de volta, <?= htmlspecialchars($usuario['username']) ?>!</div>
             <div class="card-body">
                 <p class="card-text">Veja a seleção de filmes e séries da semana!</p>
                 <div class="row justify-content-around gap-3">
@@ -40,6 +47,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="card common-container borderless mt-3">
             <div class="card-header fs-5 title-font">Alugados por você</div>
             <div class="card-body">
@@ -53,7 +61,6 @@
             </div>
         </div>
     </div>
-    
     
     <footer class="d-flex flex-column align-items-center justify-content-center">
         <div class="nav-logo"><img src="../img/Logo_streaming(2).png" alt="Logo"></div>
