@@ -167,4 +167,4 @@ error_reporting(E_ALL);
     }
 
     renderizar:
-    require_once __DIR__ . '/../view/main.php';
+    require_once __DIR__ . '/../view/home.php';
