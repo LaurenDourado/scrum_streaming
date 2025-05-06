@@ -59,12 +59,12 @@
         <h1>Login</h1>
         <form method="post" class="log-form">
             <div class="mb-3">
-                <label for="user" class="form-label">Usuário</label>
-                <input type="text" name="user" id="usuario" class="form-control common-input" placeholder="Nome de usuario" required>
+                <label for="username" class="form-label">Usuário</label>
+                <input type="text" name="username" id="usuario" class="form-control common-input" placeholder="Nome de usuario" required>
             </div>
             <div class="mb-3">
-                <label for="senha" class="form-label">Senha</label>
-                <input type="password" name="senha" id="senha" class="form-control common-input" required>
+                <label for="password" class="form-label">Senha</label>
+                <input type="password" name="password" id="senha" class="form-control common-input" required>
             </div>
             <button class="btn common-btn" type="submit">Entrar</button>
         </form>

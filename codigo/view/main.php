@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../services/auth.php';
+require_once __DIR__ . 'services/auth.php';
 
 use Services\Auth;
 

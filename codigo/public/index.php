@@ -128,14 +128,15 @@
                 $resultadoImagem = processarImagem($_FILES['poster']);
                 if (isset($resultadoImagem['erro'])) {
                     $mensagem = $resultadoImagem['erro'];
-                    goto renderizar;
                 }
                 $poster = $resultadoImagem['caminho'];
             } else {
                 $poster = null;
             }
 
-            $item = ((($tipo == 'filme') ? new Filme($titulo, $sinopse, $genero, $tipo, $poster) : ($tipo = 'Serie')) ? new Serie($titulo, $sinopse, $genero, $tipo, $poster) : ($tipo = 'Documentario')) ? new Documentario($titulo, $sinopse, $genero, $tipo, $poster) : new Novela($titulo, $sinopse, $genero, $tipo, $poster);
+            $item = ((($tipo == 'Filme') ? new Filme($titulo, $sinopse, $genero, $tipo, $poster) : ($tipo = 'Serie'))
+             ? new Serie($titulo, $sinopse, $genero, $tipo, $poster) : ($tipo = 'Documentario'))
+              ? new Documentario($titulo, $sinopse, $genero, $tipo, $poster) : new Novela($titulo, $sinopse, $genero, $tipo, $poster);
 
             $locadora->adicionarItem($item);
 
@@ -162,4 +163,4 @@
     }
 
     renderizar:
-    require_once __DIR__ . '../views/main.php';
+    require_once __DIR__ . '/../view/home.php';
