@@ -121,7 +121,7 @@ class Locadora {
     }
 
     // devolver veiculo
-    public function devolverDeiculo(string $genero): string{
+    public function devolverItem(string $genero): string{
         foreach($this->categorias as $item){
             if($item -> getTipo() === $genero && !$item->isDisponivel()){
                 $mensagem = $item->devolver();
@@ -152,4 +152,5 @@ class Locadora {
             throw new \Exception("Tipo desconhecido: " . $tipo);
         }
     }
+ 
 }

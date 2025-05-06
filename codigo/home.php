@@ -22,15 +22,10 @@ $usuario = Auth::getUsuario();
     <title>CineHome</title>
 </head>
 <body>
-<<<<<<< HEAD:codigo/home_user.html
     <nav class="navbar navbar-expand-lg nav-color p-0">
-=======
-    <nav class="navbar nav-expand-lg nav-color">
->>>>>>> 300e11f717f7bfdb8ef679defbfdad82784137e6:codigo/home.php
         <div class="container">
             <a href="home_adm.html" class="navbar-brand nav-logo"><img src="../img/Logo Streaming Filmes.svg" alt="Logo"></a>
             <div class="dropdown nav-item">
-<<<<<<< HEAD:codigo/home_user.html
                 <i class="bi bi-person"></i>
                 <nav class="navbar navbar-expand-lg secondary-bg-color p-2" id="bottom-navbar-container">
                     <div class="container">
@@ -57,48 +52,13 @@ $usuario = Auth::getUsuario();
                       </ul>
                     </div>
                   </nav>
-=======
-                <button class="btn common-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><?= htmlspecialchars($usuario['username']) ?></button>
-                <ul class="dropdown-menu">
-                    <li><a href="home.php" class="dropdown-item">Home</a></li>
-                    <li><a href="main.php" class="dropdown-item">Catálogo</a></li>
-                </ul>
->>>>>>> 300e11f717f7bfdb8ef679defbfdad82784137e6:codigo/home.php
             </div>
         </div>
     </nav>
 
-<<<<<<< HEAD:codigo/home_user.html
     <div class="bem">
         <h1>Bem-vindo de volta, Usuário!</h1>
         <p>Veja a recomendação de filme e série da semana</p>
-=======
-    <div class="container m-lg-5">
-        <div class="card common-container borderless">
-            <div class="card-header fs-5 title-font">Bem-vindo de volta, <?= htmlspecialchars($usuario['username']) ?>!</div>
-            <div class="card-body">
-                <p class="card-text">Veja a seleção de filmes e séries da semana!</p>
-                <div class="row justify-content-around gap-3">
-                    <img src="../img/osfantasmassedivertem.jpg" alt="semanal1" class="fmsr-poster">
-                    <img src="../img/boskolooneytunes.jpg" alt="semanal2" class="fmsr-poster">
-                    <img src="../img/ligadajustiça.jpg" alt="semanal3" class="fmsr-poster">
-                </div>
-            </div>
-        </div>
-        
-        <div class="card common-container borderless mt-3">
-            <div class="card-header fs-5 title-font">Alugados por você</div>
-            <div class="card-body">
-                <div class="row justify-content-around gap-3">
-                    <img src="../img/mylittlepony.jpg" alt="alugado1" class="fmsr-poster">
-                    <img src="../img/monsterhigh.jpg" alt="alugado2" class="fmsr-poster">
-                    <img src="../img/backardigans.jpg" alt="alugado3" class="fmsr-poster">
-                    <img src="../img/jurassicpark.jpg" alt="alugado4" class="fmsr-poster">
-                </div>
-                <p class="mt-3 limite card-text">Você atingiu o limite de alugados no momento, devolva um item para poder alugar um novo</p>
-            </div>
-        </div>
->>>>>>> 300e11f717f7bfdb8ef679defbfdad82784137e6:codigo/home.php
     </div>
 
     
