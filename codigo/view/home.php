@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . 'Services/auth.php';
+require_once __DIR__ . '/../services/auth.php';
 
 use Services\Auth;
 
@@ -13,12 +13,12 @@ $usuario = Auth::getUsuario();
     <!-- bootstrap -->
         <!-- usar por link online quando tiver internet, caso contrário usar local -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- bootstrap icons -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
-    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <!-- css extra -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>CineHome</title>
 </head>
 <body>
@@ -35,12 +35,12 @@ $usuario = Auth::getUsuario();
                       </button>
                       <ul class="navbar-nav mb-2 mb-lg-0 collapse navbar-collapse" id="bottom-navbar">
                         <li class="nav-item">
-                          <a class="nav-link" href="home_user.html">
+                          <a class="nav-link" href="home.php">
                             Home
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="main_user.html">
+                          <a class="nav-link" href="main.php">
                             Catálogo
                           </a>
                         </li>
@@ -118,6 +118,6 @@ $usuario = Auth::getUsuario();
         <p class="lh-1" style="font-size: small;">©️2025, Cinehome.com | Direitos Reservados</p>
     </footer>
     <!-- js do bootstrap -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

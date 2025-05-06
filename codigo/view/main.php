@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . 'services/auth.php';
+require_once __DIR__ . '/../services/auth.php';
 
 use Services\Auth;
 
@@ -13,12 +13,12 @@ $usuario = Auth::getUsuario();
     <!-- bootstrap -->
         <!-- usar por link online quando tiver internet, caso contrário usar local -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- bootstrap icons -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
-    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <!-- css extra -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>CineHome</title>
 </head>
 <body>
@@ -145,7 +145,7 @@ $usuario = Auth::getUsuario();
                             <th>Ações</th>
                         </thead>
                         <tbody>
-                            <?php foreach($categorias->getCatalogo() as $item): ?>
+                            <?php foreach($locadora->getCatalogo() as $item): ?>
                             <tr>
                                 <td><img src="<?= $item->poster ?>"></td>
                                 <td><?= htmlspecialchars($item->titulo)?></td>

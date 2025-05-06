@@ -1,4 +1,8 @@
 <?php
+// Enable error reporting for debugging
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
     // incluir o autoload
     require_once __DIR__ . '/../vendor/autoload.php';
@@ -163,4 +167,4 @@
     }
 
     renderizar:
-    require_once __DIR__ . '/../view/home.php';
+    require_once __DIR__ . '/../view/main.php';
