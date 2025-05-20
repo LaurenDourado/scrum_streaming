@@ -35,18 +35,13 @@ $usuario = Auth::getUsuario();
                       </button>
                       <ul class="navbar-nav mb-2 mb-lg-0 collapse navbar-collapse" id="bottom-navbar">
                         <li class="nav-item">
-                          <a class="nav-link" href="home.php">
+                          <a class="nav-link" href="../public/index.php?pagina=0">
                             Home
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="main.php">
+                          <a class="nav-link" href="../public/index.php?pagina=1">
                             Catálogo
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">
-                            Assinaturas
                           </a>
                         </li>
                       </ul>

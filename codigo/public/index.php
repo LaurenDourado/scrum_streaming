@@ -166,5 +166,14 @@ error_reporting(E_ALL);
 
     }
 
-    renderizar:
+renderizar:
+if($_GET['pagina']){
+    if($_GET['pagina'] == 0){
+        require_once __DIR__ . '/../view/home.php';
+    } elseif ($_GET['pagina'] == 1){
+        require_once __DIR__ . '/../view/main.php';
+    }
+} else {
+    $pagina = 0;
     require_once __DIR__ . '/../view/home.php';
+}

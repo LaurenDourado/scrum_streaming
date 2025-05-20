@@ -30,8 +30,16 @@ $usuario = Auth::getUsuario();
             <div class="dropdown nav-item">
                 <button class="btn common-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><?= htmlspecialchars($usuario['username'])?></button>
                 <ul class="dropdown-menu">
-                    <li><a href="home.php" class="dropdown-item">Home</a></li>
-                    <li><a href="main.php" class="dropdown-item">Catálogo</a></li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../public/index.php?pagina=0">
+                        Home
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../public/index.php?pagina=1">
+                        Catálogo
+                      </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -197,6 +205,6 @@ $usuario = Auth::getUsuario();
 
 
     <!-- js do bootstrap -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
